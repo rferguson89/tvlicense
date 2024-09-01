@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0040)https://www.gov.uk/pay-court-fine-online -->
-<html class="govuk-template show-global-bar" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html class="govuk-template show-global-bar" xmlns:th="http://www.thymeleaf.org" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta property="og:description" content="The only service you can use to pay your court fine online, or by telephone using a credit or debit card.">
     <meta property="og:title" content="Pay a court fine">
@@ -30,19 +30,20 @@
         Pay a TV License fine - GOV.UK
     </title>
 
-    <script src="TV%20License%20fines/lux-measurer-db6c8505a6690974922b8578eb1f2208d3073807f98d9a048efe9991f8dfc92d.js.download" async="async"></script>
-    <script src="TV%20License%20fines/rum-loader-a65b10e18ceeba3bd8a2eac507c7f2c513cdc82f35097df903fdea87f1dc2e33.js.download" async="async" data-lux-reporter-script="/assets/static/govuk_publishing_components/vendor/lux/lux-reporter-b692919ca8006e1b96c531b5081246449e6c39407d58e3882e4ab0a23475fe9c.js"></script>
+    <script src="../static/css/lux-measurer-db6c8505a6690974922b8578eb1f2208d3073807f98d9a048efe9991f8dfc92d.js.download" async="async"></script>
+    <script src="../static/css/rum-loader-a65b10e18ceeba3bd8a2eac507c7f2c513cdc82f35097df903fdea87f1dc2e33.js.download" async="async" data-lux-reporter-script="/assets/static/govuk_publishing_components/vendor/lux/lux-reporter-b692919ca8006e1b96c531b5081246449e6c39407d58e3882e4ab0a23475fe9c.js"></script>
 
     <meta name="govuk:components_gem_version" content="43.0.1">
-    <script src="TV%20License%20fines/load-analytics-4dd193f5c1779c7b4bbd9fd0dbc2b9a427c223eff1564fa6dc22ba4a6d152f5e.js.download" type="module"></script>
+    <script src="../static/css/load-analytics-4dd193f5c1779c7b4bbd9fd0dbc2b9a427c223eff1564fa6dc22ba4a6d152f5e.js.download" type="module"></script>
 
 
 
-    <link rel="stylesheet" href="TV%20License%20fines/application-c269b93c23827ed9c9661cc625aeaaca1f9a17f92e3b13e405066ce98ccbc439.css" media="all">
+    <link rel="stylesheet" href="../static/css/application-c269b93c23827ed9c9661cc625aeaaca1f9a17f92e3b13e405066ce98ccbc439.css" media="all">
     <link rel="icon" sizes="48x48" href="https://www.gov.uk/assets/static/favicon-f54816fc15997bd42cd90e4c50b896a1fc098c0c32957d4e5effbfa9f9b35e53.ico">
     <link rel="icon" sizes="any" href="https://www.gov.uk/assets/static/favicon-50144c9d83e59584c45b249ad9e9abfdd23689876c33f28457df13bbdd9c8688.svg" type="image/svg+xml">
     <link rel="mask-icon" href="https://www.gov.uk/assets/static/govuk-icon-mask-cdf4265165f8d7f9eec54aa2c1dfbb3d8b6d297c5d7919f0313e0836a5804bb6.svg" color="#0b0c0c">
     <link rel="apple-touch-icon" href="https://www.gov.uk/assets/static/govuk-icon-180-d2d7399ff2ba05372b6b2018cc67053e458a748cceea1a550d804dbec401e3ed.png">
+    <link rel="stylesheet" href="https://assets.publishing.service.gov.uk/government-frontend/govuk-frontend-all.css">
 
     <meta name="theme-color" content="#0b0c0c">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,11 +51,11 @@
     <meta property="og:image" content="https://www.gov.uk/assets/static/govuk-opengraph-image-03837e1cec82f217cf32514635a13c879b8c400ae3b1c207c5744411658c7635.png">
 
 
-    <link rel="stylesheet" href="TV%20License%20fines/application-76339eaf4e420cde8563800d7c1e1427d418ef744bcc9d5e3e5cd386e862f39c.css" media="all">
+    <link rel="stylesheet" href="../static/css/application-76339eaf4e420cde8563800d7c1e1427d418ef744bcc9d5e3e5cd386e862f39c.css" media="all">
     <link rel="canonical" href="https://www.gov.uk/pay-court-fine-online">
-    <link rel="stylesheet" href="TV%20License%20fines/_govspeak-a2055f6d7d69470c78777ab2c98b9075202a317dcd8380a1c3b0924f56bbbeda.css">
-    <link rel="stylesheet" href="TV%20License%20fines/_contextual-sidebar-9fb871b0434ba7553aed133229e31f5acdb93af133cfade7c81e94370c0c942b.css">
-    <link rel="stylesheet" href="TV%20License%20fines/_related-navigation-7541490115d40c977392570f22a3a100cc9ea364672e9414aabe14dd2788fd09.css">
+    <link rel="stylesheet" href="../static/css/_govspeak-a2055f6d7d69470c78777ab2c98b9075202a317dcd8380a1c3b0924f56bbbeda.css">
+    <link rel="stylesheet" href="../static/css/_contextual-sidebar-9fb871b0434ba7553aed133229e31f5acdb93af133cfade7c81e94370c0c942b.css">
+    <link rel="stylesheet" href="../static/css/_related-navigation-7541490115d40c977392570f22a3a100cc9ea364672e9414aabe14dd2788fd09.css">
     <meta name="govuk:rendering-application" content="government-frontend">
 </head>
 <body class="gem-c-layout-for-public govuk-template__body js-enabled govuk-frontend-supported">
@@ -332,80 +333,65 @@
                 <div class="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
 
                     <h1 class="gem-c-title__text govuk-heading-xl">
-                        Pay a TV license fine
+                        Enter details
                     </h1>
                 </div>
             </div>
         </div>
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <div class="responsive-bottom-margin">
-
-                    <div class="gem-c-govspeak govuk-govspeak direction-ltr disable-youtube" data-module="govspeak" data-govspeak-module-started="true">
-                        <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak" data-govspeak-module-started="true">
-
-                            <p>Use this service to pay a fine for not having a TV Licence when one was required.</p>
 
 
-                            <p>Your notice of fine letter will tell you how much you have to pay and when you must pay it by.</p>
+                <form th:object="${fine}" th:action="@{/search}" method="POST">
 
-
-
-
-                        </div>
-
-
-                        <div role="note" aria-label="Information" class="application-notice info-notice">
-                            <p>This page is also available <a href="https://www.gov.uk/talu-dirwy-llys-ar-lein">in Welsh (Cymraeg)</a>.</p>
-                        </div>
-
-
-                        <h2 id="how-to-pay">How to pay</h2>
-
-                        <p>You need your fine reference number and a debit or credit card. If you’ve lost your notice of fine, <a rel="external" href="https://www.find-court-tribunal.service.gov.uk/">contact the court</a> where you received the fine.</p>
-
-                        <p>You must pay by the date given in your notice of fine. The court might reject your payment if enforcement action has already started.</p>
-
-                        <h3 id="pay-online">Pay online</h3>
-
-                        <p>You can pay online by clicking the button below.</p>
-
-                        <p><a class="gem-c-button govuk-button govuk-button--start" role="button" data-module="govuk-button" data-ga4-attributes="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;start button&quot;}" draggable="false" href="fine-search.html" data-govuk-button-module-started="true"><span> Start now </span><svg class="govuk-button__start-icon govuk-!-display-none-print" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" focusable="false" aria-hidden="true"><path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path></svg></a></p>
-
-                        <h3 id="pay-by-phone">Pay by phone</h3>
-
-                        <div class="contact">
-                            <p>Telephone: 0300 790 9901 (in England)<br>
-                                Telephone: 0300 790 9980 (in Wales)<br>
-                                Telephone: 0300 790 9972 (in Scotland)<br>
-                                Telephone: 0300 790 9964 (in N. Ireland)<br>
-                                <a href="https://www.gov.uk/call-charges">Find out about call charges</a></p>
-                        </div>
-
-                        <h3 id="other-ways-to-pay">Other ways to pay</h3>
-
-                        <p>Contact the Enforcement Office listed on the notice of fine to pay by direct debit, payment card or bank transfer.</p>
-
-
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="width-10">
+                            Fine Reference Number
+                        </label>
+                        <input th:field="*{reference}" class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
                     </div>
-                </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="width-10">
+                            House Number
+                        </label>
+                        <input th:field="*{house-number}" class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="width-10">
+                            Postcode
+                        </label>
+                        <input th:field="*{postcode}" class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+                    </div>
+
+                    <button type="submit" class="gem-c-button govuk-button govuk-button--start" data-module="govuk-button" data-ga4-attributes="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;start button&quot;}" draggable="false">
+                        <span>Search</span>
+                        <svg class="govuk-button__start-icon govuk-!-display-none-print" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" focusable="false" aria-hidden="true">
+                            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+                        </svg>
+                    </button>
+                </form>
+
+
+
             </div>
-
-            <div class="govuk-grid-column-one-third">
-
-
-
-
-            </div>
-
-
         </div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+
+
+
+
+</div>
+
 
 </div>
 
 </div>
 
-
+</div>
 
 
 
@@ -685,9 +671,9 @@ This is the end of the main content that can be edited -->
         </div>
     </div>
 </footer>
-<script src="TV%20License%20fines/application-9476a2f3ccf87bd379bcebc486e4666954e6a2fbd08abd01a674d46864cfb450.js.download" type="module"></script>
-<script src="TV%20License%20fines/es6-components-2437e5204c4be0c02bed478e61f0a87e906e70743ce5b3cf8de0e81890c6ae6e.js.download" type="module"></script>
-<script src="TV%20License%20fines/application-4557910923b8aabe845f8ddd00033639cceaf19198efff6d371bafc71ebc154a.js.download" type="module"></script><script src="TV%20License%20fines/es6-components-10628d19296d4f26ca3f81004d940fc45589811549be6f9c01fc7b1c80f7eac4.js.download" type="module"></script><script type="application/ld+json">
+<script src="../static/css/application-9476a2f3ccf87bd379bcebc486e4666954e6a2fbd08abd01a674d46864cfb450.js.download" type="module"></script>
+<script src="../static/css/es6-components-2437e5204c4be0c02bed478e61f0a87e906e70743ce5b3cf8de0e81890c6ae6e.js.download" type="module"></script>
+<script src="../static/css/application-4557910923b8aabe845f8ddd00033639cceaf19198efff6d371bafc71ebc154a.js.download" type="module"></script><script src="../static/css/es6-components-10628d19296d4f26ca3f81004d940fc45589811549be6f9c01fc7b1c80f7eac4.js.download" type="module"></script><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "FAQPage",
