@@ -43,6 +43,7 @@
     <link rel="icon" sizes="any" href="https://www.gov.uk/assets/static/favicon-50144c9d83e59584c45b249ad9e9abfdd23689876c33f28457df13bbdd9c8688.svg" type="image/svg+xml">
     <link rel="mask-icon" href="https://www.gov.uk/assets/static/govuk-icon-mask-cdf4265165f8d7f9eec54aa2c1dfbb3d8b6d297c5d7919f0313e0836a5804bb6.svg" color="#0b0c0c">
     <link rel="apple-touch-icon" href="https://www.gov.uk/assets/static/govuk-icon-180-d2d7399ff2ba05372b6b2018cc67053e458a748cceea1a550d804dbec401e3ed.png">
+    <link rel="stylesheet" href="https://assets.publishing.service.gov.uk/government-frontend/govuk-frontend-all.css">
 
     <meta name="theme-color" content="#0b0c0c">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -332,80 +333,65 @@
                 <div class="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
 
                     <h1 class="gem-c-title__text govuk-heading-xl">
-                        Pay a TV license fine
+                        Enter details
                     </h1>
                 </div>
             </div>
         </div>
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <div class="responsive-bottom-margin">
-
-                    <div class="gem-c-govspeak govuk-govspeak direction-ltr disable-youtube" data-module="govspeak" data-govspeak-module-started="true">
-                        <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak" data-govspeak-module-started="true">
-
-                            <p>Use this service to pay a fine for not having a TV Licence when one was required.</p>
 
 
-                            <p>Your notice of fine letter will tell you how much you have to pay and when you must pay it by.</p>
+                <form th:object="${fine}" th:action="@{/search}" method="POST">
 
-
-
-
-                        </div>
-
-
-                        <div role="note" aria-label="Information" class="application-notice info-notice">
-                            <p>This page is also available <a href="https://www.gov.uk/talu-dirwy-llys-ar-lein">in Welsh (Cymraeg)</a>.</p>
-                        </div>
-
-
-                        <h2 id="how-to-pay">How to pay</h2>
-
-                        <p>You need your fine reference number and a debit or credit card. If you’ve lost your notice of fine, <a rel="external" href="https://www.find-court-tribunal.service.gov.uk/">contact the court</a> where you received the fine.</p>
-
-                        <p>You must pay by the date given in your notice of fine. The court might reject your payment if enforcement action has already started.</p>
-
-                        <h3 id="pay-online">Pay online</h3>
-
-                        <p>You can pay online by clicking the button below.</p>
-
-                        <p><a class="gem-c-button govuk-button govuk-button--start" role="button" data-module="govuk-button" data-ga4-attributes="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;start button&quot;}" draggable="false" href="fine-search.html" data-govuk-button-module-started="true"><span> Start now </span><svg class="govuk-button__start-icon govuk-!-display-none-print" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" focusable="false" aria-hidden="true"><path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path></svg></a></p>
-
-                        <h3 id="pay-by-phone">Pay by phone</h3>
-
-                        <div class="contact">
-                            <p>Telephone: 0300 790 9901 (in England)<br>
-                                Telephone: 0300 790 9980 (in Wales)<br>
-                                Telephone: 0300 790 9972 (in Scotland)<br>
-                                Telephone: 0300 790 9964 (in N. Ireland)<br>
-                                <a href="https://www.gov.uk/call-charges">Find out about call charges</a></p>
-                        </div>
-
-                        <h3 id="other-ways-to-pay">Other ways to pay</h3>
-
-                        <p>Contact the Enforcement Office listed on the notice of fine to pay by direct debit, payment card or bank transfer.</p>
-
-
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="width-10">
+                            Fine Reference Number
+                        </label>
+                        <input th:field="*{reference}" class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
                     </div>
-                </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="width-10">
+                            House Number
+                        </label>
+                        <input th:field="*{house-number}" class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="width-10">
+                            Postcode
+                        </label>
+                        <input th:field="*{postcode}" class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+                    </div>
+
+                    <button type="submit" class="gem-c-button govuk-button govuk-button--start" data-module="govuk-button" data-ga4-attributes="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;start button&quot;}" draggable="false">
+                        <span>Search</span>
+                        <svg class="govuk-button__start-icon govuk-!-display-none-print" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" focusable="false" aria-hidden="true">
+                            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+                        </svg>
+                    </button>
+                </form>
+
+
+
             </div>
-
-            <div class="govuk-grid-column-one-third">
-
-
-
-
-            </div>
-
-
         </div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+
+
+
+
+</div>
+
 
 </div>
 
 </div>
 
-
+</div>
 
 
 
