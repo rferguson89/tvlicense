@@ -40,6 +40,7 @@ public class FineRestController {
     }
 
     // add mapping for GET /fine/reference/{fineReference}
+    //The endpoint retrieves a fine by its reference string
     @GetMapping("/fine/reference/{fineReference}")
     public Fine findByReference(@PathVariable String fineReference) {
         Fine theFine = fineService.findByReference(fineReference);

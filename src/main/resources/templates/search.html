@@ -1,33 +1,102 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<style>
-    .button {
-        background-color: green;
-        color: white;
-        border: 2px solid black;
-        margin: 6px;
-        padding: 6px;
-        font-size: 140%;
-    }
-</style>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
 <head>
+    <title>Pay a Fine</title>
     <meta charset="UTF-8">
-    <title>Search</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- reference CSS file -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
 </head>
+
 <body>
-  <h1>Search</h1>
-  <form th:object="${fine}" th:action="@{/amendAmount}" method="post">
-      <div>
-          <label for="reference">Reference:</label>
-          <input id="reference" th:field="*{reference}" placeholder="reference"/>
-      </div>
-      <div>
-          <label for="postcode">Postcode:</label>
-          <input id="postcode" th:field="*{postcode}" placeholder="postcode"/>
-      </div>
-      <div>
-          <button class = button type="submit">Submit</button>
-      </div>
-  </form>
+
+<nav class="navbar">
+    <div class="nav-header">
+        <img class="headicon" src="/static/css/images/logo.png" alt="TV Licence Logo">
+        <h1>TV Licence</h1>
+    </div>
+    <div class="nav-links">
+        <a href="start">Home</a>
+        <a href="search">Search Fine</a>
+    </div>
+</nav>
+    <div class="mainContent">
+        <h1>Search</h1>
+
+        <p>Use this service to pay a fine for not having a TV Licence when one was required.</p>
+        <p>Your notice of fine letter will tell you how much you have to pay and when you must pay it by.</p>
+
+        <!-- This is the start of a form element -->
+        <form th:object="${fine}" th:action="@{/fineDetails}" method="post">
+            <!-- The form will send a POST request to the URL specified by th:action -->
+
+            <!-- This is a div container for the 'reference' input field -->
+            <div>
+                <!-- Label for the 'reference' input field -->
+                <label for="reference">Reference:</label>
+                <!-- Input field for 'reference' with binding to a property in the 'fine' object -->
+                <input id="reference" th:field="*{reference}" placeholder="reference" />
+            </div>
+
+            <!-- This is a div container for the 'postcode' input field -->
+            <div>
+                <!-- Label for the 'postcode' input field -->
+                <label for="postcode">Postcode:</label>
+                <!-- Input field for 'postcode' with binding to a property in the 'fine' object -->
+                <input id="postcode" th:field="*{postcode}" placeholder="postcode" />
+            </div>
+
+            <!-- This is a div container for the submit button -->
+            <div>
+                <!-- Submit button with a class of 'button' -->
+                <button class="button" type="submit">Submit</button>
+            </div>
+        </form>
+        <!-- End of the form -->
+
+        <div class="sidebyside">
+            <div class="lcont">
+                <h2>How to pay</h2>
+
+                <p>You need your fine reference number and a debit or credit card. If you’ve lost your notice of fine, <a rel="external" href="https://www.find-court-tribunal.service.gov.uk/">contact the court</a> where you received the fine.</p>
+
+                <p>You must pay by the date given in your notice of fine. The court might reject your payment if enforcement action has already started.</p>
+
+
+
+                <h3 id="pay-by-phone">Pay by phone</h3>
+
+                <div class="contact">
+                    <p>Telephone: 0300 790 9901 (in England)<br>
+                        Telephone: 0300 790 9980 (in Wales)<br>
+                        Telephone: 0300 790 9972 (in Scotland)<br>
+                        Telephone: 0300 790 9964 (in N. Ireland)<br>
+                        <a href="https://www.gov.uk/call-charges">Find out about call charges</a>
+                    </p>
+                </div>
+
+                <h3 id="other-ways-to-pay">Other ways to pay</h3>
+
+                <p>Contact the Enforcement Office listed on the notice of fine to pay by direct debit, payment card or bank transfer.</p>
+            </div>
+
+            <div class="rcont">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<!-- Footer Section -->
+<footer class="footer">
+    <p>&copy; 2024 TV Licence. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a></p>
+</footer>
+
 </body>
+
 </html>

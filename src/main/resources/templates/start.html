@@ -1,18 +1,12 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<style>
-	.button {
-		background-color: green;
-		color: white;
-		border: 2px solid black;
-		margin: 5px;
-		padding: 5px;
-		font-size: 140%;
-	}
-</style>
+
 
 <head>
 	<title>Pay a fine</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- reference CSS file -->
 	<link rel="stylesheet"
@@ -26,7 +20,98 @@
 <!--<p th:text="'Time on the server is ' + ${theDate}" class="notice" />-->
 <!--<p th:text="${banana}" class="notice" />-->
 
-<a class="button" href="search">Start ></a>
+
+
+
+
+<!-- Navigation Bar with Header -->
+<nav class="navbar">
+	<div class="nav-header">
+		<img class="headicon" src="/images/logo2.png" alt="TV Licence Logo">
+		<h1>TV Licence</h1>
+	</div>
+	<div class="nav-links">
+		<a href="start">Home</a>
+		<a href="search">Search Fine</a>
+	</div>
+</nav>
+
+
+	<div class="mainContent">
+		<h1>Pay a TV license fine</h1>
+
+
+		<p>Use this service to pay a fine for not having a TV Licence when one was required.</p>
+
+
+		<p>Your notice of fine letter will tell you how much you have to pay and when you must pay it by.</p>
+
+
+
+
+		<div class="sidebyside">
+			<div class="lcont">
+				<h2>Search Fine </h2>
+				<p>
+					INSERT TEXT HERE
+				</p>
+				<p>
+					INSERT TEXT HERE
+				</p>
+
+
+				<h2 id="how-to-pay">How to pay</h2>
+
+				<p>You need your fine reference number and a debit or credit card. If you’ve lost your notice of fine, <a rel="external" href="https://www.find-court-tribunal.service.gov.uk/">contact the court</a> where you received the fine.</p>
+
+				<p>You must pay by the date given in your notice of fine. The court might reject your payment if enforcement action has already started.</p>
+
+				<h3 id="pay-online">Pay online</h3>
+
+				<p>You can pay online by clicking the button below.</p>
+
+				<a class="button" href="search">Start ></a>
+
+				<h3 id="pay-by-phone">Pay by phone</h3>
+
+				<div class="contact">
+					<p>Telephone: 0300 790 9901 (in England)<br>
+						Telephone: 0300 790 9980 (in Wales)<br>
+						Telephone: 0300 790 9972 (in Scotland)<br>
+						Telephone: 0300 790 9964 (in N. Ireland)<br>
+						<a href="https://www.gov.uk/call-charges">Find out about call charges</a></p>
+				</div>
+
+				<h3 id="other-ways-to-pay">Other ways to pay</h3>
+
+				<p>Contact the Enforcement Office listed on the notice of fine to pay by direct debit, payment card or bank transfer.</p>
+			</div>
+
+
+			<div class="rcont">
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+</div>
+
+
+
+
+<!-- Footer Section --><!-- Footer Section -->
+<footer class="footer">
+	<p>&copy; 2024 TV Licence. All rights reserved.</p>
+	<p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a></p>
+</footer>
+</div>
+
+
+
+
 
 </body>
 

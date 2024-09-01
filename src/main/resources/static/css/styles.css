@@ -1,5 +1,214 @@
-.notice {
-    font-style: italic;
-    color: red;
+/* Ensure body and html take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Ensure container fills the remaining space */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+/* Body Styling */
+body {
+    font-family: 'GDS Transport', Arial, sans-serif;
+    color: #0b0c0c; /* Primary text color */
+    background-color: #FFFFFF; /* Background color */
+    padding: 0 20px;
+
+}
+
+
+
+h1, h2, h3 {
+    color: #0b0c0c;
+}
+
+
+
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b0c0c;
+    padding: 10px 20px;
+    color: white;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+}
+
+.nav-header img.headicon {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.nav-header h1 {
+    font-size: 1.5em;
+    margin: 0;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.nav-links a:hover {
+    background-color: #005f5f;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* The container for the Fine Details page */
+.fine-details-container {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f3f2f1;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.fine-details {
+    background-color: #e2e3e5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Buttons Section */
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Buttons */
+.button {
+    background-color: #00703c; /* Dark Green for buttons */
+    color: #FFFFFF; /* White text */
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.button:hover {
+    background-color: #005f5f; /* Darker Green on hover */
+}
+
+/* Footer */
+.footer {
+    background-color: #0b0c0c;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer a {
+    color: #00ffcc;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Stack the navbar items vertically on small screens */
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Adjust fine details container on smaller screens */
+    .fine-details-container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .fine-details {
+        padding: 10px;
+    }
+
+    /* Stack buttons vertically on smaller screens */
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .nav-header h1 {
+        font-size: 1.2em;
+    }
+
+    .nav-header img.headicon {
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .nav-links a {
+        font-size: 1em;
+    }
+
+    .button {
+        width: 90%;
+        font-size: 1em;
+    }
+
+    .fine-details-container {
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .fine-details {
+        padding: 8px;
+    }
+}

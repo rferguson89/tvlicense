@@ -15,6 +15,31 @@ public class FineWebController {
     @Autowired
     private FineService fineService;
 
+    @PostMapping("/fineDetails")
+    public String displayFineDetails(@ModelAttribute FineAmountDTO fineAmountDTO, Model model) {
+        Fine theFine = fineService.findByReference(fineAmountDTO.getReference());
+
+        if (theFine != null) {
+            model.addAttribute("fine", theFine);
+            return "fine-details.html";
+        } else {
+            // Handle case where fine is not found
+            return "search";
+        }
+    }
+
+
+
+
+    // Method to handle GET requests for the amend amount form
+    @GetMapping("/amendAmount")
+    public String showAmendAmountForm(Model model) {
+        model.addAttribute("fineAmountDTO", new FineAmountDTO()); // Or populate with existing data
+        return "fine-form";
+    }
+
+
+
     @PostMapping("/amendAmount")
     public String displayFineForm(@ModelAttribute FineAmountDTO fineAmountDTO, Model model) {
         Fine theFine = fineService.findByReference(fineAmountDTO.getReference());

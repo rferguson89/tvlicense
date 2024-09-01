@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Fine Amount</title>
+
+    <!-- UIkit CSS
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/css/uikit.min.css" />
+-->
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/js/uikit-icons.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="nav-header">
+        <img class="headicon" src="/static.css/images/logo.png" alt="TV Licence Logo">
+        <h1>TV Licence</h1>
+    </div>
+    <div class="nav-links">
+        <a href="start">Home</a>
+        <a href="search">Search Fine</a>
+    </div>
+</nav>
+
+       <!--- <div class="uk-width-1-2@s">
+            <div>
+                <form th:object="${fineAmountDTO}" th:action="@{/updateAmount}" method="post" class="uk-form-stacked">
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="reference">Reference:</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="reference" th:field="*{reference}" placeholder="Reference" type="text">
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="amount">Amount:</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="amount" th:field="*{amount}" placeholder="Amount" type="text">
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <button class="uk-button uk-button-primary" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+------>
+
+
+    <!-- Display the full amount owed -->
+<div class="fine-details-container">
+    <h1>Fine Details</h1>
+    <p>Here are the details for the fine associated with reference number <strong th:text="${fine.reference}"></strong>:</p>
+    <div class="fine-details">
+        <label>Name:</label>
+        <span th:text="${fine.firstName} + ' ' + ${fine.lastName}">John Doe</span>
+        <h3>Total Fine Amount Owed: <span th:text="'£' + ${fine.amount}">£0.00</span></h3>
+    </div>
+</div>
+
+
+
+<div class="button-container">
+
+
+        <!-- Card for "Pay Amount In Fll"
+        <div>
+            <div class="uk-card uk-card-default uk-card-body uk-card-hover">
+
+
+                <a th:href="@{/payFullAmount(reference=${fineAmountDTO.reference})}" class="button">Pay Full Amount</a>
+            </div>
+        </div>
+-->
+
+
+
+        <!-- Card for "Make a one-off payment" -->
+            <div>
+                <div class="uk-card uk-card-default uk-card-body uk-card-hover">
+
+
+                    <a th:href="@{/amendAmount}" class="button">Make Payment</a>
+                </div>
+            </div>
+
+
+            <!-- Card for "Back" -->
+            <div>
+                <div class="uk-card uk-card-default uk-card-body uk-card-hover">
+
+                    <a th:href="@{/search}" class="button">Go Back</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 TV Licence. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a></p>
+    </footer>
+    </div>
+
+</body>
+
+</html>

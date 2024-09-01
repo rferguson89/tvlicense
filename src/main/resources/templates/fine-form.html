@@ -1,23 +1,102 @@
+
+
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="eng">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Fine Amount</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/js/uikit-icons.min.js"></script>
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" th:href="@{/css/styles.css}" />
 </head>
+
+
 <body>
-<h1>Deduct from Fine Balance</h1>
-<form th:object="${fineAmountDTO}" th:action="@{/updateAmount}" method="post">
-    <div>
-        <label for="reference">Reference:</label>
-        <input id="reference" th:field="*{reference}" placeholder="reference"/>
+
+
+
+<nav class="navbar">
+    <div class="nav-header">
+        <img class="headicon" src="/static/css/images/logo.png" alt="TV Licence Logo">
+        <h1>TV Licence</h1>
     </div>
-    <div>
-        <label for="amount">Amount:</label>
-        <input type="text" id="amount" th:field="*{amount}" placeholder="amount"/>
+    <div class="nav-links">
+        <a href="start">Home</a>
+        <a href="search">Search Fine</a>
     </div>
-    <div>
-        <button type="submit">Submit</button>
+</nav>
+
+
+<div uk-grid>
+    <div class="uk-width-1-2@s">
+        <div>
+            <h2>Deduct from Fine Balance</h2>
+        </div>
     </div>
-</form>
+    <div class="uk-width-1-2@s">
+        <div>
+            <form th:object="${fineAmountDTO}" th:action="@{/updateAmount}" method="post" class="uk-form-stacked">
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="reference">Reference:</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="reference" th:field="*{reference}" placeholder="Reference" type="text">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="amount">Amount:</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="amount" th:field="*{amount}" placeholder="Amount" type="text">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <button class="uk-button uk-button-primary" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="uk-container">
+    <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body uk-card-hover">
+                <h3 class="uk-card-title">Pay Amount In Full </h3>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body uk-card-hover">
+                <h3 class="uk-card-title">Make a  one-off payment</h3>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body uk-card-hover">
+                <h3 class="uk-card-title">Back</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Footer Section -->
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 TV Licence. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a></p>
+    </footer>
+
+</div>
+
 </body>
+
 </html>

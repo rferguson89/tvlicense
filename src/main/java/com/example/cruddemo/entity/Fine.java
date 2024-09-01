@@ -96,14 +96,14 @@ public class Fine {
     
     @Override
     public String toString() {
-        return "Employee{" +
-                "EmployeeId=" + id +
-                ", FirstName='" + firstName + '\'' +
-                ", LastName='" + lastName + '\'' +
-                ", Email='" + email + '\'' +
-                ", PostCode='" + postCode + '\'' +
-                ", Reference='" + reference + '\'' +
-                ", Amount='" + amount + '\'' +
+        return "Fine{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", postCode='" + postCode + '\'' +
+                ", reference='" + reference + '\'' +
+                ", amount='" + amount + '\'' +
                 '}';
     }
 }
